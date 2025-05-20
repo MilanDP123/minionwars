@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Main-Class: be.ugent.objprog.minionwars.MinionWars
+Class-Path: javafx-graphics-21.jar javafx-base-21.jar javafx-fxml-21-lin
+ ux-aarch64.jar jdom2-2.0.6.1.jar javafx-base-21-linux-aarch64.jar javaf
+ x-fxml-21.jar javafx-controls-21.jar javafx-controls-21-linux-aarch64.j
+ ar javafx-graphics-21-linux-aarch64.jar
+

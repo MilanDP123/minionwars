@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox prefHeight="800.0" prefWidth="1000.0" stylesheets="@gamescherm.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.ugent.objprog.minionwars.GameSchermController">
+   <children>
+      <VBox alignment="CENTER">
+         <children>
+            <GridPane prefHeight="25.0" prefWidth="300.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.0" minWidth="80.0" prefWidth="80.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="140.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="50.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label fx:id="currentName" alignment="CENTER" maxWidth="140.0" prefHeight="30.0" text="naam" GridPane.columnIndex="1" />
+                  <Label fx:id="topText" alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="50.0" styleClass="geleText" text="munten" GridPane.columnIndex="3">
+                     <font>
+                        <Font size="17.0" />
+                     </font></Label>
+                  <ImageView fx:id="topIcon" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.vgrow="NEVER">
+                     <image>
+                        <Image url="@images/icons/coin-FFB900.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <Pane fx:id="menuPane" maxWidth="300.0" minWidth="300.0" prefHeight="700.0" prefWidth="300.0" />
+            <HBox fx:id="buttonsBox" alignment="CENTER" prefHeight="60.0" prefWidth="300.0">
+               <children>
+                  <Button fx:id="eindeBeurtButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#eindeBeurt" text="Einde beurt">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <HBox.margin>
+            <Insets bottom="10.0" />
+         </HBox.margin>
+      </VBox>
+      <ScrollPane fx:id="gamePane" hbarPolicy="ALWAYS" prefHeight="800.0" vbarPolicy="ALWAYS" />
+   </children>
+</HBox>

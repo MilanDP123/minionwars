@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="300.0" type="VBox" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.ugent.objprog.minionwars.MinionViewerController">
+   <children>
+      <HBox fx:id="topBox" alignment="CENTER_LEFT" prefHeight="92.0" prefWidth="300.0">
+         <children>
+            <Circle fx:id="icon" radius="25.0" stroke="BLACK" strokeType="INSIDE">
+               <HBox.margin>
+                  <Insets left="2.0" right="5.0" />
+               </HBox.margin>
+            </Circle>
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="259.0">
+               <children>
+                  <HBox prefHeight="56.0" prefWidth="203.0">
+                     <children>
+                        <VBox prefHeight="56.0" prefWidth="153.0">
+                           <children>
+                              <Label fx:id="nameLabel" minHeight="0.0" minWidth="0.0" prefHeight="20.0" prefWidth="162.0" text="bereden boogschutter" textAlignment="CENTER" wrapText="true" />
+                              <Label fx:id="tileLabel" prefHeight="20.0" prefWidth="166.0" text="Ondergrond: Forest" wrapText="true" />
+                           </children>
+                        </VBox>
+                        <ImageView fx:id="damageIcon" fitHeight="33.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons/attack-D60000.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="2.0" top="3.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label fx:id="damageLabel" prefHeight="15.0" prefWidth="15.0" text="1" textFill="RED">
+                           <HBox.margin>
+                              <Insets top="2.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ImageView fx:id="defenceIcon" fitHeight="33.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons/health-D60000.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="3.0" top="3.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label fx:id="defenceLabel" prefHeight="15.0" prefWidth="33.0" text="11/11" textFill="RED">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="2.0" />
+                           </HBox.margin></Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <VBox fx:id="effectsInfoBox" prefHeight="40.0" prefWidth="300.0" />
+      <TabPane fx:id="tabPane" prefHeight="601.0" prefWidth="320.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Bewegen">
+            <content>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Label prefHeight="100.0" prefWidth="216.0" text="Selecteer een groen veld op het spelbord of kies om te blijven staan" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="blijfStaanButton" mnemonicParsing="false" onAction="#blijfStaan" prefHeight="37.0" prefWidth="124.0" text="Blijf staan" />
+                     </children>
+                  </VBox>
+            </content>
+          </Tab>
+          <Tab text="Aanvallen">
+            <content>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Label prefHeight="98.0" prefWidth="203.0" text="Selecteer een aanval uit de lijst en klik op een vijandige minion" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+						</Label>
+                        <Button fx:id="basisAanvalButton" mnemonicParsing="false" onAction="#basisAanval" text="Basis aanval">
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="specialAanvalButton" layoutX="139.0" layoutY="332.0" mnemonicParsing="false" onAction="#specialeAanval" text="Speciale aanval">
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Label text="of">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Button fx:id="healButton" mnemonicParsing="false" onAction="#healMinion" text="Genees minion (+2hp)" />
+                     </children>
+                  </VBox>
+            </content>
+          </Tab>
+            <Tab text="Bonus">
+               <content>
+                  <VBox fx:id="bonusBox" />
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</fx:root>

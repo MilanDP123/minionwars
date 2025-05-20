@@ -1,0 +1,101 @@
+AnchorPane {
+    -fx-background-color: black;
+}
+
+Label {
+    -fx-font-weight: bold;
+}
+
+.overlay {
+    -fx-fill: transparent;
+    -fx-opacity: 0.5;
+}
+
+.overlay-red {
+    -fx-fill: red;
+    -fx-opacity: 0.5;
+}
+
+.overlay-yellow {
+    -fx-fill: yellow;
+    -fx-opacity: 0.5;
+}
+
+.overlay-blue {
+    -fx-fill: blue;
+    -fx-opacity: 0.5;
+}
+
+.overlay-green {
+    -fx-fill: green;
+    -fx-opacity: 0.5;
+}
+
+.overlay-border-red {
+    -fx-stroke: red;
+}
+
+.overlay-border-blue {
+    -fx-stroke: blue;
+}
+
+.overlay-border-aqua {
+    -fx-stroke: aqua;
+}
+
+.overlay-border-darkgreen {
+    -fx-stroke: darkgreen;
+}
+
+.overlay:hover {
+    -fx-stroke: blue;
+}
+
+MinionButton {
+    -fx-border-color: black;
+}
+
+MinionButton:hover {
+    -fx-background-color: lightgray;
+}
+
+.rodeText {
+    -fx-text-fill: red;
+    -fx-font-weight: bold;
+}
+
+.blauwetext {
+    -fx-text-fill: blue;
+    -fx-font-weight: bold;
+}
+
+.groenetext {
+    -fx-text-fill: green;
+    -fx-font-weight: bold;
+}
+
+.geleText {
+    -fx-text-fill: DarkGoldenRod;
+    -fx-font-weight: bold;
+}
+
+.selected-button {
+    -fx-background-color: bisque;
+}
+
+PowerButton {
+    -fx-border-color: black;
+}
+
+PowerButton:hover {
+    -fx-background-color: lightgray;
+}
+
+.selected-power-button {
+    -fx-background-color: bisque;
+}
+
+GridPane {
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+}
